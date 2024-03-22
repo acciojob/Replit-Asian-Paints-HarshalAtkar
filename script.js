@@ -13,8 +13,9 @@ document.getElementById("from").addEventListener("click", function() {
 });
 
 document.getElementById("reset_button").addEventListener("click", function() {
-  var blocks = document.getElementsByClassName("grid-item");
-  for (var i = 0; i < blocks.length; i++) {
-    blocks[i].style.backgroundColor = "transparent";
-  }
+  document.querySelectorAll(".grid-item").forEach((elem) => {
+  elem.style.backgroundColor = "transparent";
 });
+});
+
+
